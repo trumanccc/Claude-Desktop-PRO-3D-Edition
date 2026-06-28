@@ -1,7 +1,6 @@
 printer:
   name: Anycubic Kobra X
-  build_volume: [400,400,450]
+  build_volume_mm: [400,400,450]
 analysis:
-  default_material: PLA
-reports:
-  output: reports
+  engine: placeholder
+next_engine: trimesh

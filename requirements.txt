@@ -1,5 +1,5 @@
-pyyaml>=6.0
 trimesh>=4.7
 numpy>=2.0
+pyyaml>=6.0
 rich>=14.0
 pytest>=8.0

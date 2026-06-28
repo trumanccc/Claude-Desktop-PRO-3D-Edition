@@ -1,8 +1,24 @@
+
 import argparse
-from printing3d.analyzers import stl,obj,threemf
+from printing3d.profiles.kobra_x import fits
+from printing3d.analyzers.estimate import estimate
+
 p=argparse.ArgumentParser()
-p.add_argument('type',choices=['stl','obj','3mf'])
-p.add_argument('file')
+sub=p.add_subparsers(dest='cmd')
+
+f=sub.add_parser('fits')
+f.add_argument('x',type=float);f.add_argument('y',type=float);f.add_argument('z',type=float)
+
+e=sub.add_parser('estimate')
+e.add_argument('volume',type=float)
+e.add_argument('--material',default='PLA')
+e.add_argument('--price',type=float,default=20)
+
 a=p.parse_args()
-m={'stl':stl.analyze,'obj':obj.analyze,'3mf':threemf.analyze}
-print(m[a.type](a.file))
+
+if a.cmd=='fits':
+    print({'fits_kobra_x':fits(a.x,a.y,a.z)})
+elif a.cmd=='estimate':
+    print(estimate(a.volume,a.material,a.price))
+else:
+    p.print_help()

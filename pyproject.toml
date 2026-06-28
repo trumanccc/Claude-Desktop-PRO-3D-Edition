@@ -1,3 +1,5 @@
 [project]
-name="claude-desktop-pro-3d"
-version="0.2.0"
+name="printing3d"
+version="0.5.0"
+description="3D Printing Toolkit for Claude Desktop PRO"
+requires-python=">=3.12"

@@ -1,0 +1,7 @@
+printer:
+  name: Anycubic Kobra X
+  nozzle: 0.4
+material:
+  default: PLA
+reports:
+  format: markdown

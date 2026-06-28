@@ -1,0 +1,7 @@
+printer:
+  name: Anycubic Kobra X
+  build_volume: [400,400,450]
+analysis:
+  default_material: PLA
+reports:
+  output: reports

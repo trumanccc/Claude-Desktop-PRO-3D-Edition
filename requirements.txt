@@ -1,1 +1,1 @@
-# Future: numpy, trimesh, pyyaml
+pyyaml>=6.0
